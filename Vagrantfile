@@ -7,23 +7,20 @@ Vagrant::Config.run do |config|
     puppet.manifest_file = "site.pp"
   end
 
+  config.vm.box = "lucid64"
+  config.vm.box_url = "http://dl.dropbox.com/u/7490647/talifun-ubuntu-11.04-server-amd64.box"
+
   config.vm.define :riak10 do |config|
-    config.vm.box = "ubuntu-11.10"
-    config.vm.box_url = "http://timhuegdon.com/vagrant-boxes/ubuntu-11.10.box"
     config.vm.network :hostonly, "192.168.33.10"
     config.vm.host_name = "riak10.mwl.test"
   end
 
   config.vm.define :riak11 do |config|
-    config.vm.box = "ubuntu-11.10"
-    config.vm.box_url = "http://timhuegdon.com/vagrant-boxes/ubuntu-11.10.box"
     config.vm.network :hostonly, "192.168.33.11"
     config.vm.host_name = "riak11.mwl.test"
   end
 
   config.vm.define :riak12 do |config|
-    config.vm.box = "ubuntu-11.10"
-    config.vm.box_url = "http://timhuegdon.com/vagrant-boxes/ubuntu-11.10.box"
     config.vm.network :hostonly, "192.168.33.12"
     config.vm.host_name = "riak12.mwl.test"
   end
