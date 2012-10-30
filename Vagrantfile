@@ -7,8 +7,8 @@ Vagrant::Config.run do |config|
     puppet.manifest_file = "site.pp"
   end
 
-  config.vm.box = "lucid64"
-  config.vm.box_url = "http://files.vagrantup.com/lucid64.box"
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   config.vm.define :riak10 do |config|
     config.vm.network :hostonly, "192.168.33.10"
@@ -30,7 +30,7 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  # config.vm.box = "ubuntu-11.10"
+  # config.vm.box = "ubuntu-12.04"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
